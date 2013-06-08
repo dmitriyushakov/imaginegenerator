@@ -9,24 +9,29 @@
         <translation>О Imagine Generator</translation>
     </message>
     <message>
-        <location filename="gui/about.ui" line="127"/>
+        <location filename="gui/about.ui" line="131"/>
         <source>Author: Dmitriy Ushakov</source>
         <translation>Автор: Дмитрий Ушаков</translation>
     </message>
     <message>
-        <location filename="gui/about.ui" line="134"/>
+        <location filename="gui/about.ui" line="138"/>
         <source>Version: </source>
         <oldsource>Version: 1.0</oldsource>
         <translation>Версия:</translation>
     </message>
     <message>
-        <location filename="gui/about.ui" line="171"/>
+        <location filename="gui/about.ui" line="145"/>
+        <source>License: </source>
+        <translation>Лицензия: </translation>
+    </message>
+    <message>
+        <location filename="gui/about.ui" line="182"/>
         <location filename="gui/about.cpp" line="29"/>
         <source>About Qt</source>
         <translation>О Qt</translation>
     </message>
     <message>
-        <location filename="gui/about.ui" line="178"/>
+        <location filename="gui/about.ui" line="189"/>
         <source>Close</source>
         <translation>Закрыть</translation>
     </message>
@@ -39,7 +44,7 @@
         <translation>Размер</translation>
     </message>
     <message>
-        <location filename="gui/exportsize.ui" line="35"/>
+        <location filename="gui/exportsize.ui" line="39"/>
         <source>Enter size of image:</source>
         <translation>Введите размер:</translation>
     </message>
@@ -47,69 +52,69 @@
 <context>
     <name>LayoutSettings</name>
     <message>
-        <location filename="gui/layersettings.ui" line="29"/>
+        <location filename="gui/layersettings.ui" line="33"/>
         <source>Script:</source>
         <translation>Сценарий:</translation>
     </message>
     <message>
-        <location filename="gui/layersettings.ui" line="39"/>
+        <location filename="gui/layersettings.ui" line="43"/>
         <source>Colors</source>
         <translation>Цвета</translation>
     </message>
     <message>
-        <location filename="gui/layersettings.ui" line="45"/>
+        <location filename="gui/layersettings.ui" line="49"/>
         <source>Grey color</source>
         <translation>Серый цвет</translation>
     </message>
     <message>
-        <location filename="gui/layersettings.ui" line="55"/>
+        <location filename="gui/layersettings.ui" line="59"/>
         <source>Tricolor</source>
         <translation>Цветной</translation>
     </message>
     <message>
-        <location filename="gui/layersettings.ui" line="67"/>
+        <location filename="gui/layersettings.ui" line="71"/>
         <source>Red</source>
         <translation>Красный</translation>
     </message>
     <message>
-        <location filename="gui/layersettings.ui" line="77"/>
+        <location filename="gui/layersettings.ui" line="81"/>
         <source>Green</source>
         <translation>Зеленый</translation>
     </message>
     <message>
-        <location filename="gui/layersettings.ui" line="87"/>
+        <location filename="gui/layersettings.ui" line="91"/>
         <source>Blue</source>
         <translation>Синий</translation>
     </message>
     <message>
-        <location filename="gui/layersettings.ui" line="102"/>
+        <location filename="gui/layersettings.ui" line="106"/>
         <source>Pointer Settings</source>
         <translation>Настройки указателя</translation>
     </message>
     <message>
-        <location filename="gui/layersettings.ui" line="108"/>
+        <location filename="gui/layersettings.ui" line="112"/>
         <source>X axis</source>
         <translation>Ось X</translation>
     </message>
     <message>
-        <location filename="gui/layersettings.ui" line="115"/>
-        <location filename="gui/layersettings.ui" line="136"/>
+        <location filename="gui/layersettings.ui" line="119"/>
+        <location filename="gui/layersettings.ui" line="140"/>
         <source>Relatively</source>
         <translation>Относительно</translation>
     </message>
     <message>
-        <location filename="gui/layersettings.ui" line="122"/>
-        <location filename="gui/layersettings.ui" line="143"/>
+        <location filename="gui/layersettings.ui" line="126"/>
+        <location filename="gui/layersettings.ui" line="147"/>
         <source>Absolute</source>
         <translation>Абсолютно</translation>
     </message>
     <message>
-        <location filename="gui/layersettings.ui" line="129"/>
+        <location filename="gui/layersettings.ui" line="133"/>
         <source>Y axis</source>
         <translation>Ось Y</translation>
     </message>
     <message>
-        <location filename="gui/layersettings.ui" line="155"/>
+        <location filename="gui/layersettings.ui" line="159"/>
         <source>Render</source>
         <translation>Отрисовать</translation>
     </message>
@@ -280,12 +285,12 @@
         <translation>Прорисовка</translation>
     </message>
     <message>
-        <location filename="gui/renderwaitdialog.ui" line="41"/>
+        <location filename="gui/renderwaitdialog.ui" line="45"/>
         <source>Please wait...</source>
         <translation>Пожайлуста подождите...</translation>
     </message>
     <message>
-        <location filename="gui/renderwaitdialog.ui" line="73"/>
+        <location filename="gui/renderwaitdialog.ui" line="77"/>
         <source>Stop</source>
         <translation>Остановить</translation>
     </message>
@@ -293,88 +298,88 @@
 <context>
     <name>Window</name>
     <message>
-        <location filename="gui/window.cpp" line="38"/>
+        <location filename="gui/window.cpp" line="40"/>
         <source>File</source>
         <translation>Файл</translation>
     </message>
     <message>
-        <location filename="gui/window.cpp" line="39"/>
+        <location filename="gui/window.cpp" line="41"/>
         <source>Open</source>
         <translation>Открыть</translation>
     </message>
     <message>
-        <location filename="gui/window.cpp" line="40"/>
+        <location filename="gui/window.cpp" line="42"/>
         <source>Save</source>
         <translation>Сохранить</translation>
     </message>
     <message>
-        <location filename="gui/window.cpp" line="41"/>
+        <location filename="gui/window.cpp" line="43"/>
         <source>Save as</source>
         <translation>Сохранить как</translation>
     </message>
     <message>
-        <location filename="gui/window.cpp" line="43"/>
+        <location filename="gui/window.cpp" line="45"/>
         <source>Export</source>
         <translation>Экспорт</translation>
     </message>
     <message>
-        <location filename="gui/window.cpp" line="45"/>
+        <location filename="gui/window.cpp" line="47"/>
         <source>Exit</source>
         <translation>Выход</translation>
     </message>
     <message>
-        <location filename="gui/window.cpp" line="46"/>
+        <location filename="gui/window.cpp" line="48"/>
         <source>Help</source>
         <translation>Справка</translation>
     </message>
     <message>
-        <location filename="gui/window.cpp" line="47"/>
+        <location filename="gui/window.cpp" line="49"/>
         <source>About</source>
         <translation>О программе</translation>
     </message>
     <message>
-        <location filename="gui/window.cpp" line="75"/>
-        <location filename="gui/window.cpp" line="108"/>
-        <location filename="gui/window.cpp" line="262"/>
+        <location filename="gui/window.cpp" line="77"/>
+        <location filename="gui/window.cpp" line="110"/>
+        <location filename="gui/window.cpp" line="264"/>
         <source>Save file</source>
         <translation>Сохранить файл</translation>
     </message>
     <message>
-        <location filename="gui/window.cpp" line="108"/>
-        <location filename="gui/window.cpp" line="136"/>
+        <location filename="gui/window.cpp" line="110"/>
+        <location filename="gui/window.cpp" line="138"/>
         <source>Imagine Generator project (*.igp)</source>
         <translation>Проект Imagine Generator (*.igp)</translation>
     </message>
     <message>
-        <location filename="gui/window.cpp" line="116"/>
-        <location filename="gui/window.cpp" line="191"/>
+        <location filename="gui/window.cpp" line="118"/>
+        <location filename="gui/window.cpp" line="193"/>
         <source>Save file error</source>
         <translation>Ошибка сохранения файла</translation>
     </message>
     <message>
-        <location filename="gui/window.cpp" line="136"/>
+        <location filename="gui/window.cpp" line="138"/>
         <source>Open file</source>
         <translation>Открыть файл</translation>
     </message>
     <message>
-        <location filename="gui/window.cpp" line="144"/>
-        <location filename="gui/window.cpp" line="167"/>
+        <location filename="gui/window.cpp" line="146"/>
+        <location filename="gui/window.cpp" line="169"/>
         <source>Warning</source>
         <translation>Предупреждение</translation>
     </message>
     <message>
-        <location filename="gui/window.cpp" line="147"/>
-        <location filename="gui/window.cpp" line="170"/>
+        <location filename="gui/window.cpp" line="149"/>
+        <location filename="gui/window.cpp" line="172"/>
         <source>Open file error</source>
         <translation>Ошибка открытия файла</translation>
     </message>
     <message>
-        <location filename="gui/window.cpp" line="231"/>
+        <location filename="gui/window.cpp" line="233"/>
         <source>Script exception</source>
         <translation>Исключение</translation>
     </message>
     <message>
-        <location filename="gui/window.cpp" line="263"/>
+        <location filename="gui/window.cpp" line="265"/>
         <source>You want to save file?</source>
         <translation>Вы хотите сохранить файл?</translation>
     </message>

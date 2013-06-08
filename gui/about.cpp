@@ -18,6 +18,7 @@ About::About(QWidget *parent) :
     connect(ui->closeBtn,SIGNAL(clicked()),this,SLOT(close()));
     connect(ui->aboutQtBtn,SIGNAL(clicked()),this,SLOT(aboutQt()));
     ui->versionLbl->setText(ui->versionLbl->text().append(VERSION));
+    ui->licenseLbl->setText(ui->licenseLbl->text().append("GPLv2"));
 }
 
 void About::paintEvent(QPaintEvent *){

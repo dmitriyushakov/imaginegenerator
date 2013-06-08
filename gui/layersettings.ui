@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>350</width>
-    <height>548</height>
+    <height>554</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowIcon">
-   <iconset resource="../resources.qrc">
+   <iconset resource="../resources/resources.qrc">
     <normaloff>:/icon.png</normaloff>:/icon.png</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -178,7 +178,7 @@
   </layout>
  </widget>
  <resources>
-  <include location="../resources.qrc"/>
+  <include location="../resources/resources.qrc"/>
  </resources>
  <connections/>
 </ui>

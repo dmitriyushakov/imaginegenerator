@@ -29,7 +29,7 @@
    <string>Size</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="../resources.qrc">
+   <iconset resource="../resources/resources.qrc">
     <normaloff>:/icon.png</normaloff>:/icon.png</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -105,7 +105,7 @@
   </layout>
  </widget>
  <resources>
-  <include location="../resources.qrc"/>
+  <include location="../resources/resources.qrc"/>
  </resources>
  <connections/>
 </ui>
