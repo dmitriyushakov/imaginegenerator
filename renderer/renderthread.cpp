@@ -33,7 +33,7 @@ void RenderThread::run(){
     }
     if(img)emit rendered(img);
     delete renderer;
-    renderer=0;\
+    renderer=0;
 }
 
 void RenderThread::stopRendering(){

@@ -2,7 +2,7 @@
 Name=Imagine Generator
 GenericName=Generator of images.
 GenericName[ru]=Генератор изображений.
-Exec=/usr/bin/imagine-generator %u
+Exec=imagine-generator %u
 Icon=imaginegenerator
 Terminal=false
 Type=Application
