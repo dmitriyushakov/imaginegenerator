@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Imagine Generator
+GenericName=Generator of images.
+GenericName[ru]=Генератор изображений.
+Exec=/usr/bin/imagine-generator %u
+Icon=imaginegenerator
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Graphics;2DGraphics;RasterGraphics;

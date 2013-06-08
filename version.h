@@ -1,0 +1,3 @@
+#define PROJECT_VERSION 1
+#define PROJECT_API_LEVEL 1
+#define VERSION "1.0"
