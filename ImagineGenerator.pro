@@ -83,7 +83,7 @@ translations.path=$${PREFIX}/share/imaginegenerator/translations/
 translations.files+=*.qm
 INSTALLS+=translations
 
-ICON = resources/icon.ico
+RC_FILE = resource.rc
 
 RESOURCES += \
     resources/resources.qrc
