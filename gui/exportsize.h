@@ -2,6 +2,8 @@
 #define EXPORTSIZE_H
 
 #include <QDialog>
+#include <QList>
+#include <QSize>
 
 namespace Ui {
 class ExportSize;
@@ -16,9 +18,13 @@ public:
     ~ExportSize();
 private slots:
     void okClicked();
+    void onSelectResol();
+    void onOtherSize();
 signals:
     void sizeChoiced(int w,int h);
 private:
+    QList<QSize> sizes;
+    bool lockOtherSize;
     Ui::ExportSize *ui;
 };
 
