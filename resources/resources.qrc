@@ -3,5 +3,6 @@
         <file>logo.png</file>
         <file>icon.png</file>
         <file>resolutions</file>
+        <file>revsize.png</file>
     </qresource>
 </RCC>

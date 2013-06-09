@@ -20,6 +20,7 @@ private slots:
     void okClicked();
     void onSelectResol();
     void onOtherSize();
+    void onReverseClick();
 signals:
     void sizeChoiced(int w,int h);
 private:

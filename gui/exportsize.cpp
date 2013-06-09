@@ -54,6 +54,7 @@ ExportSize::ExportSize(QWidget *parent) :
     connect(rbox,SIGNAL(currentIndexChanged(int)),this,SLOT(onSelectResol()));
     connect(ui->widthSpin,SIGNAL(valueChanged(int)),this,SLOT(onOtherSize()));
     connect(ui->heightSpin,SIGNAL(valueChanged(int)),this,SLOT(onOtherSize()));
+    connect(ui->reverseBtn,SIGNAL(clicked()),this,SLOT(onReverseClick()));
     lockOtherSize=false;
 }
 
@@ -98,4 +99,10 @@ void ExportSize::onOtherSize(){
         }else
             ui->resolutionsBox->setCurrentIndex(0);
     }
+}
+
+void ExportSize::onReverseClick(){
+    int width=ui->heightSpin->value();
+    ui->heightSpin->setValue(ui->widthSpin->value());
+    ui->widthSpin->setValue(width);
 }
