@@ -51,9 +51,49 @@ StorageError ProjectStorage::saveLayout(Layer &lay, QString filename){
             colortype="Grey";
         }
 
+        System system=lay.getSystem();
+        QString systemtype;
+        if(system.type()==System::Rectangle){
+            systemtype="Rectangle";
+        }else{
+            systemtype="Radial";
+        }
+
+        QString cxpos;
+        if(system.xPos()==System::Left){
+            cxpos="Left";
+        }else if(system.xPos()==System::XMiddle){
+            cxpos="Middle";
+        }else{
+            cxpos="Right";
+        }
+
+        QString cypos;
+        if(system.yPos()==System::Up){
+            cypos="Up";
+        }else if(system.yPos()==System::YMiddle){
+            cypos="Middle";
+        }else{
+            cypos="Down";
+        }
+
+        QString yorient;
+        if(system.yOrientation()==System::ToUp){
+            yorient="toUp";
+        }else{
+            yorient="toDown";
+        }
+
         writer.writeTextElement("XPointerType",xtype);
         writer.writeTextElement("YPointerType",ytype);
         writer.writeTextElement("ColorType",colortype);
+
+        writer.writeStartElement("CoordSystem");
+        writer.writeAttribute("type",systemtype);
+        writer.writeAttribute("xcenter",cxpos);
+        writer.writeAttribute("ycenter",cypos);
+        writer.writeAttribute("yorientation",yorient);
+        writer.writeEndElement();
 
         writer.writeEndElement();
 
@@ -127,6 +167,36 @@ StorageError ProjectStorage::resoreLayout(Layer &lay, QString filename){
 
             if(!layer.elementsByTagName("Grey").isEmpty()){
                 lay.setGreyComponent(layer.elementsByTagName("Grey").at(0).toElement().text());
+            }
+
+            if(!layer.elementsByTagName("CoordSystem").isEmpty()){
+                QDomElement elem=layer.elementsByTagName("CoordSystem").at(0).toElement();
+                QString systemtype=elem.attribute("type","Rectangle");
+                QString cxpos=elem.attribute("xcenter","Left");
+                QString cypos=elem.attribute("ycenter","Up");
+                QString yorient=elem.attribute("yorientation","ToDown");
+
+                System sys;
+                sys.setType(systemtype=="Radial"?System::Radial : System::Rectangle);
+
+                if(cxpos=="Right"){
+                    sys.setPos(System::Right);
+                }else if(cxpos=="Middle"){
+                    sys.setPos(System::XMiddle);
+                }else{
+                    sys.setPos(System::Left);
+                }
+
+                if(cypos=="Down"){
+                    sys.setPos(System::Down);
+                }else if(cypos=="Middle"){
+                    sys.setPos(System::YMiddle);
+                }else{
+                    sys.setPos(System::Up);
+                }
+
+                sys.setYOrientation(yorient=="toUp"?System::ToUp:System::ToDown);
+                lay.setSystem(sys);
             }
 
             return StorageError::success();
