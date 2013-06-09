@@ -89,3 +89,11 @@ void Layer::setYPointType(PointType type){
 void Layer::setColorType(ColorType type){
     colortype=type;
 }
+
+System Layer::getSystem(){
+    return system;
+}
+
+void Layer::setSystem(System s){
+    system=s;
+}

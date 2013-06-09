@@ -19,7 +19,9 @@ HEADERS += \
     storage/storageerror.h \
     storage/projectstorage.h \
     gui/about.h \
-    renderer/scriptapi.h
+    renderer/scriptapi.h \
+    gui/systemchooser.h \
+    model/system.h
 
 SOURCES += \
     main.cpp \
@@ -36,13 +38,16 @@ SOURCES += \
     storage/storageerror.cpp \
     storage/projectstorage.cpp \
     gui/about.cpp \
-    renderer/scriptapi.cpp
+    renderer/scriptapi.cpp \
+    gui/systemchooser.cpp \
+    model/system.cpp
 
 FORMS += \
     gui/renderwaitdialog.ui \
     gui/exportsize.ui \
     gui/layersettings.ui \
-    gui/about.ui
+    gui/about.ui \
+    gui/systemchooser.ui
 
 TARGET = "imagine-generator"
 

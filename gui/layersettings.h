@@ -21,10 +21,15 @@ public:
     void setProjLayout(Layer lay);
     Ui::LayoutSettings *ui;
 private:
+    void showSystemInfo(System &s);
+    System system;
     QButtonGroup xtypegr;
     QButtonGroup ytypegr;
 private slots:
     void colorTypeChanged();
+    void changeSystem();
+    void enableChangeSystem();
+    void systemChanged(System sys);
 signals:
     void projectChanged();
     void renderClicked();

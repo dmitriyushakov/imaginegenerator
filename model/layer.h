@@ -5,6 +5,7 @@
 
 #include "pointtype.h"
 #include "componenttype.h"
+#include "system.h"
 
 enum ColorType{
     Tricolor,
@@ -21,6 +22,7 @@ class Layer
     PointType xtype;
     PointType ytype;
     ColorType colortype;
+    System system;
 public:
     Layer();
     QString getScript();
@@ -32,6 +34,7 @@ public:
     PointType getXPointType();
     PointType getYPointType();
     ColorType getColorType();
+    System getSystem();
     void setScript(QString script);
     void setRComponent(QString expr);
     void setGComponent(QString expr);
@@ -41,6 +44,7 @@ public:
     void setXPointType(PointType type);
     void setYPointType(PointType type);
     void setColorType(ColorType type);
+    void setSystem(System s);
 };
 
 #endif // LAYER_H

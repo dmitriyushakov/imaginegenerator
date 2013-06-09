@@ -43,12 +43,11 @@ ExportSize::ExportSize(QWidget *parent) :
         }
         resolFile.close();
     }else{
-        QMessageBox *mb=new QMessageBox();
-        mb->setWindowTitle("Imagine Generator");
-        mb->setText("Can't read resolutions resource.");
-        mb->setIcon(QMessageBox::Critical);
-        mb->exec();
-        delete mb;
+        QMessageBox mb;
+        mb.setWindowTitle("Imagine Generator");
+        mb.setText("Can't read resolutions resource.");
+        mb.setIcon(QMessageBox::Critical);
+        mb.exec();
     }
 
     connect(rbox,SIGNAL(currentIndexChanged(int)),this,SLOT(onSelectResol()));
