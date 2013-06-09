@@ -97,32 +97,31 @@ LayerSettings::~LayerSettings()
 void LayerSettings::showSystemInfo(System &s){
     QString str;
     str+=(s.type()==System::Rectangle)?tr("Rectangle"):tr("Radial");
-    if(s.type()==System::Rectangle){
-        str+="; ";
+    str+="; ";
 
-        QStringList yPosStrs;
-        yPosStrs.append(tr("Up"));
-        yPosStrs.append(tr("Middle"));
-        yPosStrs.append(tr("Down"));
+    QStringList yPosStrs;
+    yPosStrs.append(tr("Up"));
+    yPosStrs.append(tr("Middle"));
+    yPosStrs.append(tr("Down"));
 
-        QStringList xPosStrs;
-        xPosStrs.append(tr("Left"));
-        xPosStrs.append(tr("Middle"));
-        xPosStrs.append(tr("Right"));
+    QStringList xPosStrs;
+    xPosStrs.append(tr("Left"));
+    xPosStrs.append(tr("Middle"));
+    xPosStrs.append(tr("Right"));
 
-        QString str1=xPosStrs.at(s.xPos());
-        QString str2=yPosStrs.at(s.yPos());
+    QString str1=xPosStrs.at(s.xPos());
+    QString str2=yPosStrs.at(s.yPos());
 
-        if(str1==str2){
-            str+=str1;
-        }else{
-            str+=str2+"-"+str1;
-        }
-
-        str+="; ";
-
-        str+=(s.yOrientation()==System::ToDown)?tr("To down"):tr("To up");
+    if(str1==str2){
+        str+=str1;
+    }else{
+        str+=str2+"-"+str1;
     }
+
+    str+="; ";
+
+    str+=(s.yOrientation()==System::ToDown)?tr("To down"):tr("To up");
+    ui->pointerGroup->setEnabled(system.type()==System::Rectangle);
     ui->systemLbl->setText(str);
 }
 

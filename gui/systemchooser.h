@@ -22,7 +22,6 @@ signals:
     void systemSelected(System system);
 private slots:
     void okClicked();
-    void onChangeType();
 private:
     QButtonGroup typeGroup;
     Ui::SystemChooser *ui;

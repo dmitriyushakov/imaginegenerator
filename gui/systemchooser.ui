@@ -32,6 +32,13 @@
     </widget>
    </item>
    <item>
+    <widget class="QRadioButton" name="radialBtn">
+     <property name="text">
+      <string>Radial coordinate system</string>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QFrame" name="rectFrm">
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -74,13 +81,6 @@
        </widget>
       </item>
      </layout>
-    </widget>
-   </item>
-   <item>
-    <widget class="QRadioButton" name="radialBtn">
-     <property name="text">
-      <string>Radial coordinate system</string>
-     </property>
     </widget>
    </item>
    <item>

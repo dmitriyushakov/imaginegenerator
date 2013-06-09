@@ -13,6 +13,7 @@ private:
     int lprogr;
     bool _stop;
     bool toStop();
+    System coordSys;
 public:
     void stop();
     bool hasError();

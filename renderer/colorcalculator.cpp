@@ -1,5 +1,7 @@
 #include "colorcalculator.h"
 #include "scriptapi.h"
+#include "qmath.h"
+#include "math.h"
 
 ColorCalculator::ColorCalculator()
 {
@@ -46,7 +48,6 @@ bool ColorCalculator::isNull(){
 
 uint ColorCalculator::getPixel(int x,int y,double rx,double ry){
     if(_isnull)return 0;
-    uint value=0;
 
     if(absolutex)engine.globalObject().setProperty("x",x);
     else engine.globalObject().setProperty("x",rx);
@@ -54,6 +55,11 @@ uint ColorCalculator::getPixel(int x,int y,double rx,double ry){
     if(absolutey)engine.globalObject().setProperty("y",y);
     else engine.globalObject().setProperty("y",ry);
 
+    return getPixel();
+}
+
+uint ColorCalculator::getPixel(){
+    uint value=0;
     if(isColor){
         value=(red->math()<<16)|(green->math()<<8)|blue->math();
         if(red->hasError()){
@@ -83,6 +89,24 @@ uint ColorCalculator::getPixel(int x,int y,double rx,double ry){
         }
     }
     return value;
+}
+
+uint ColorCalculator::getRadialPixel(int x, int y, int cx, int cy){
+    int dx=x-cx;
+    int dy=y-cy;
+
+    qreal radius=qSqrt(dx*dx+dy*dy);
+    qreal sinus=0;
+    if(radius>0)sinus=qreal(dy)/radius;
+    qreal angle=qAsin(sinus);
+
+    if(dx<0)angle=M_PI-angle;
+    if(angle<0)angle+=M_PI*2;
+
+    engine.globalObject().setProperty("r",radius);
+    engine.globalObject().setProperty("a",angle);
+
+    return getPixel();
 }
 
 bool ColorCalculator::hasError(){

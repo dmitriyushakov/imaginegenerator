@@ -28,7 +28,6 @@ private:
     XPosition _xpos;
     YOrientation _yorient;
     SystemType _type;
-    void setStandart();
 public:
     void setYOrientation(YOrientation orient);
     void setType(SystemType type);
@@ -39,8 +38,6 @@ public:
     SystemType type();
     XPosition xPos();
     YPosition yPos();
-    static System getRadial();
-    static System getRectangle(XPosition xpos,YPosition ypos,YOrientation yorient);
     System();
 };
 

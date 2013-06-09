@@ -35,8 +35,6 @@ SystemChooser::SystemChooser(QWidget *parent) :
             ui->centerBox->addItem(str);
         }
 
-    connect(ui->rectBtn,SIGNAL(toggled(bool)),this,SLOT(onChangeType()));
-    connect(ui->radialBtn,SIGNAL(toggled(bool)),this,SLOT(onChangeType()));
     connect(ui->buttonBox,SIGNAL(rejected()),this,SLOT(close()));
     connect(ui->buttonBox,SIGNAL(accepted()),this,SLOT(okClicked()));
 }
@@ -60,23 +58,24 @@ SystemChooser::~SystemChooser()
     delete ui;
 }
 
-void SystemChooser::onChangeType()
-{
-    ui->rectFrm->setEnabled(ui->rectBtn->isChecked());
-}
-
 void SystemChooser::okClicked(){
     System system;
-    if(ui->rectBtn->isChecked()){
-        int pos=ui->centerBox->currentIndex();
-        System::XPosition posx=(System::XPosition)(pos%3);
-        System::YPosition posy=(System::YPosition)(pos/3);
-        System::YOrientation orient;
-        if(ui->toDownBtn->isChecked()){
-            orient=System::ToDown;
-        }else orient=System::ToUp;
-        system=System::getRectangle(posx,posy,orient);
-    }else system=System::getRadial();
+
+    System::SystemType type=(ui->rectBtn->isChecked())? System::Rectangle : System::Radial;
+
+    int pos=ui->centerBox->currentIndex();
+    System::XPosition posx=(System::XPosition)(pos%3);
+    System::YPosition posy=(System::YPosition)(pos/3);
+
+    System::YOrientation orient;
+    if(ui->toDownBtn->isChecked()){
+        orient=System::ToDown;
+    }else orient=System::ToUp;
+
+    system.setPos(posx,posy);
+    system.setYOrientation(orient);
+    system.setType(type);
+
     emit systemSelected(system);
     close();
 }

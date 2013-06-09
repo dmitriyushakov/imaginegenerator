@@ -19,6 +19,7 @@ class ColorCalculator
     QScriptEngine engine;
     bool absolutex;
     bool absolutey;
+    uint getPixel();
 public:
     QScriptEngine *getEngine();
     ColorCalculator();
@@ -26,6 +27,7 @@ public:
     ~ColorCalculator();
     bool isNull();
     uint getPixel(int x,int y,double rx,double ry);
+    uint getRadialPixel(int x,int y,int cx,int cy);
     void setSize(int width,int height);
     bool hasError();
     QString errorMessage();
