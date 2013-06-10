@@ -17,7 +17,8 @@ private:
     static QScriptValue funcLn(QScriptContext *cont,QScriptEngine *);
     static QScriptValue funcLog(QScriptContext *cont,QScriptEngine *);
     static QScriptValue funcExp(QScriptContext *cont,QScriptEngine *);
-    static QScriptValue funcStrip(QScriptContext *cons,QScriptEngine *);
+    static QScriptValue funcStrip(QScriptContext *cont,QScriptEngine *);
+    static QScriptValue funcDist(QScriptContext *cont,QScriptEngine *);
 public:
     static void installAPI(QScriptEngine &engine);
 };

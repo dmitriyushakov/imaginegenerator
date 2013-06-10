@@ -155,6 +155,7 @@ void Window::open(){
         control->setProjLayout(lay);
         edited=false;
         setTitle(ofname);
+        toRender();
     }
 }
 

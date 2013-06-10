@@ -210,6 +210,18 @@ QScriptValue ScriptAPI::funcStrip(QScriptContext *cont, QScriptEngine *){
     return val;
 }
 
+QScriptValue ScriptAPI::funcDist(QScriptContext *cont, QScriptEngine *)
+{
+    if(cont->argumentCount()<2){
+        cont->throwError("Must be two arguments.");
+        return 0;
+    }
+    int x=cont->argument(0).toInt32();
+    int y=cont->argument(1).toInt32();
+    qreal dist=qSqrt(x*x+y*y);
+    return dist;
+}
+
 void ScriptAPI::installAPI(QScriptEngine &engine){
     // Functions
     engine.globalObject().setProperty("sqrt",engine.newFunction(funcSqrt));
@@ -222,6 +234,7 @@ void ScriptAPI::installAPI(QScriptEngine &engine){
     engine.globalObject().setProperty("log",engine.newFunction(funcLog));
     engine.globalObject().setProperty("exp",engine.newFunction(funcExp));
     engine.globalObject().setProperty("strip",engine.newFunction(funcStrip));
+    engine.globalObject().setProperty("dist",engine.newFunction(funcDist));
     // Constants
     engine.globalObject().setProperty("pi",QScriptValue(M_PI));
     engine.globalObject().setProperty("e",QScriptValue(M_E));
