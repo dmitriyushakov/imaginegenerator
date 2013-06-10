@@ -26,7 +26,7 @@
     </message>
     <message>
         <location filename="gui/about.ui" line="182"/>
-        <location filename="gui/about.cpp" line="29"/>
+        <location filename="gui/about.cpp" line="30"/>
         <source>About Qt</source>
         <translation>О Qt</translation>
     </message>
@@ -39,14 +39,68 @@
 <context>
     <name>ExportSize</name>
     <message>
-        <location filename="gui/exportsize.ui" line="29"/>
+        <location filename="gui/exportsize.ui" line="17"/>
         <source>Size</source>
         <translation>Размер</translation>
     </message>
     <message>
-        <location filename="gui/exportsize.ui" line="39"/>
+        <location filename="gui/exportsize.ui" line="27"/>
         <source>Enter size of image:</source>
         <translation>Введите размер:</translation>
+    </message>
+    <message>
+        <location filename="gui/exportsize.cpp" line="25"/>
+        <source>Other</source>
+        <translation>Другой</translation>
+    </message>
+</context>
+<context>
+    <name>LayerSettings</name>
+    <message>
+        <location filename="gui/layersettings.cpp" line="99"/>
+        <source>Rectangle</source>
+        <translation>Прямоугольная</translation>
+    </message>
+    <message>
+        <location filename="gui/layersettings.cpp" line="99"/>
+        <source>Radial</source>
+        <translation>Радиальная</translation>
+    </message>
+    <message>
+        <location filename="gui/layersettings.cpp" line="103"/>
+        <source>Up</source>
+        <translation>Верх.</translation>
+    </message>
+    <message>
+        <location filename="gui/layersettings.cpp" line="104"/>
+        <location filename="gui/layersettings.cpp" line="109"/>
+        <source>Middle</source>
+        <translation>Средн.</translation>
+    </message>
+    <message>
+        <location filename="gui/layersettings.cpp" line="105"/>
+        <source>Down</source>
+        <translation>Нижн.</translation>
+    </message>
+    <message>
+        <location filename="gui/layersettings.cpp" line="108"/>
+        <source>Left</source>
+        <translation>Лев.</translation>
+    </message>
+    <message>
+        <location filename="gui/layersettings.cpp" line="110"/>
+        <source>Right</source>
+        <translation>Прав.</translation>
+    </message>
+    <message>
+        <location filename="gui/layersettings.cpp" line="123"/>
+        <source>To down</source>
+        <translation>Вниз</translation>
+    </message>
+    <message>
+        <location filename="gui/layersettings.cpp" line="123"/>
+        <source>To up</source>
+        <translation>Вверх</translation>
     </message>
 </context>
 <context>
@@ -87,34 +141,39 @@
         <translation>Синий</translation>
     </message>
     <message>
-        <location filename="gui/layersettings.ui" line="106"/>
+        <location filename="gui/layersettings.ui" line="108"/>
+        <source>Coordinats</source>
+        <translation>Координаты</translation>
+    </message>
+    <message>
+        <location filename="gui/layersettings.ui" line="127"/>
         <source>Pointer Settings</source>
         <translation>Настройки указателя</translation>
     </message>
     <message>
-        <location filename="gui/layersettings.ui" line="112"/>
+        <location filename="gui/layersettings.ui" line="133"/>
         <source>X axis</source>
         <translation>Ось X</translation>
     </message>
     <message>
-        <location filename="gui/layersettings.ui" line="119"/>
         <location filename="gui/layersettings.ui" line="140"/>
+        <location filename="gui/layersettings.ui" line="161"/>
         <source>Relatively</source>
         <translation>Относительно</translation>
     </message>
     <message>
-        <location filename="gui/layersettings.ui" line="126"/>
         <location filename="gui/layersettings.ui" line="147"/>
+        <location filename="gui/layersettings.ui" line="168"/>
         <source>Absolute</source>
         <translation>Абсолютно</translation>
     </message>
     <message>
-        <location filename="gui/layersettings.ui" line="133"/>
+        <location filename="gui/layersettings.ui" line="154"/>
         <source>Y axis</source>
         <translation>Ось Y</translation>
     </message>
     <message>
-        <location filename="gui/layersettings.ui" line="159"/>
+        <location filename="gui/layersettings.ui" line="180"/>
         <source>Render</source>
         <translation>Отрисовать</translation>
     </message>
@@ -127,71 +186,71 @@
         <translation>Строка:</translation>
     </message>
     <message>
-        <location filename="storage/projectstorage.cpp" line="78"/>
+        <location filename="storage/projectstorage.cpp" line="118"/>
         <source>It is not Imagine Generator project.</source>
         <translation>Это не проект Imagine Generator.</translation>
     </message>
     <message>
-        <location filename="storage/projectstorage.cpp" line="79"/>
+        <location filename="storage/projectstorage.cpp" line="119"/>
         <source>&apos;ImagineProject&apos; have not &apos;apilevel&apos; attribute.</source>
         <oldsource>&apos;ImagineProgect&apos; have not &apos;apilevel&apos; attribute.</oldsource>
         <translation>&apos;ImfgineProject&apos; не имеет аттрибута &apos;apilevel&apos;.</translation>
     </message>
     <message>
-        <location filename="storage/projectstorage.cpp" line="80"/>
+        <location filename="storage/projectstorage.cpp" line="120"/>
         <source>&apos;ImagineProject&apos; have not &apos;version&apos; attribute.</source>
         <oldsource>&apos;ImagineProgect&apos; have not attribute &apos;version&apos;.</oldsource>
         <translation>&apos;ImagineProject&apos; не имеет аттрибута &apos;version&apos;.</translation>
     </message>
     <message>
-        <location filename="storage/projectstorage.cpp" line="83"/>
+        <location filename="storage/projectstorage.cpp" line="123"/>
         <source>&apos;version&apos; must have a number value.</source>
         <translation>Аттрибут &apos;version&apos; должен иметь числовое значение.</translation>
     </message>
     <message>
-        <location filename="storage/projectstorage.cpp" line="85"/>
+        <location filename="storage/projectstorage.cpp" line="125"/>
         <source>&apos;apilevel&apos; must have a number value.</source>
         <translation>Аттрибут &apos;apilevel&apos; должен иметь числовое значение.</translation>
     </message>
     <message>
-        <location filename="storage/projectstorage.cpp" line="86"/>
+        <location filename="storage/projectstorage.cpp" line="126"/>
         <source>This version of program old for open project.</source>
         <translation>Вы используете старую версию программы для открытия проекта.</translation>
     </message>
     <message>
-        <location filename="storage/projectstorage.cpp" line="87"/>
+        <location filename="storage/projectstorage.cpp" line="127"/>
         <source>This version of program maybe can&apos;t work with this project.</source>
         <translation>Эта версия может не работать с этим проектом.</translation>
     </message>
     <message>
-        <location filename="storage/projectstorage.cpp" line="89"/>
+        <location filename="storage/projectstorage.cpp" line="129"/>
         <source>Project have not layer.</source>
         <translation>В проекте нет слоя.</translation>
     </message>
     <message>
-        <location filename="storage/projectstorage.cpp" line="93"/>
+        <location filename="storage/projectstorage.cpp" line="133"/>
         <source>Project have not X pointer type difenition.</source>
         <translation>В проекте не указан тип указателя на оси X.</translation>
     </message>
     <message>
-        <location filename="storage/projectstorage.cpp" line="94"/>
+        <location filename="storage/projectstorage.cpp" line="134"/>
         <source>Project have not Y pointer type difenition.</source>
         <translation>В проекте не указан тип указателя на оси Y.</translation>
     </message>
     <message>
-        <location filename="storage/projectstorage.cpp" line="95"/>
+        <location filename="storage/projectstorage.cpp" line="135"/>
         <source>Project have not color type difenition.</source>
         <translation>В проекте не указаны настройки цвета.</translation>
     </message>
     <message>
-        <location filename="storage/projectstorage.cpp" line="98"/>
-        <location filename="storage/projectstorage.cpp" line="103"/>
-        <location filename="storage/projectstorage.cpp" line="108"/>
+        <location filename="storage/projectstorage.cpp" line="138"/>
+        <location filename="storage/projectstorage.cpp" line="143"/>
+        <location filename="storage/projectstorage.cpp" line="148"/>
         <source>Unknown &apos;%s&apos; definition.</source>
         <translation>Неизвестно значение &apos;%s&apos;.</translation>
     </message>
     <message>
-        <location filename="storage/projectstorage.cpp" line="134"/>
+        <location filename="storage/projectstorage.cpp" line="204"/>
         <source>XML parse error occured.</source>
         <translation>Ошибка обработки XML.</translation>
     </message>
@@ -296,6 +355,70 @@
     </message>
 </context>
 <context>
+    <name>SystemChooser</name>
+    <message>
+        <location filename="gui/systemchooser.ui" line="17"/>
+        <source>Select a coordinate system</source>
+        <translation>Выберите систему координат</translation>
+    </message>
+    <message>
+        <location filename="gui/systemchooser.ui" line="30"/>
+        <source>Rectangle coordinate system</source>
+        <translation>Прямоугольная система координат</translation>
+    </message>
+    <message>
+        <location filename="gui/systemchooser.ui" line="37"/>
+        <source>Radial coordinate system</source>
+        <translation>Радиальная система координат</translation>
+    </message>
+    <message>
+        <location filename="gui/systemchooser.ui" line="53"/>
+        <source>Center of coordinates:</source>
+        <translation>Центр координат:</translation>
+    </message>
+    <message>
+        <location filename="gui/systemchooser.ui" line="63"/>
+        <source>Y axis orientation</source>
+        <translation>Ориентация оси Y</translation>
+    </message>
+    <message>
+        <location filename="gui/systemchooser.ui" line="69"/>
+        <source>To down</source>
+        <translation>Вниз</translation>
+    </message>
+    <message>
+        <location filename="gui/systemchooser.ui" line="76"/>
+        <source>To up</source>
+        <translation>Вверх</translation>
+    </message>
+    <message>
+        <location filename="gui/systemchooser.cpp" line="16"/>
+        <source>Up</source>
+        <translation>Верхний</translation>
+    </message>
+    <message>
+        <location filename="gui/systemchooser.cpp" line="17"/>
+        <location filename="gui/systemchooser.cpp" line="22"/>
+        <source>Middle</source>
+        <translation>Средний</translation>
+    </message>
+    <message>
+        <location filename="gui/systemchooser.cpp" line="18"/>
+        <source>Down</source>
+        <translation>Нижний</translation>
+    </message>
+    <message>
+        <location filename="gui/systemchooser.cpp" line="21"/>
+        <source>Left</source>
+        <translation>Левый</translation>
+    </message>
+    <message>
+        <location filename="gui/systemchooser.cpp" line="23"/>
+        <source>Right</source>
+        <translation>Правый</translation>
+    </message>
+</context>
+<context>
     <name>Window</name>
     <message>
         <location filename="gui/window.cpp" line="40"/>
@@ -340,7 +463,7 @@
     <message>
         <location filename="gui/window.cpp" line="77"/>
         <location filename="gui/window.cpp" line="110"/>
-        <location filename="gui/window.cpp" line="264"/>
+        <location filename="gui/window.cpp" line="265"/>
         <source>Save file</source>
         <translation>Сохранить файл</translation>
     </message>
@@ -352,7 +475,7 @@
     </message>
     <message>
         <location filename="gui/window.cpp" line="118"/>
-        <location filename="gui/window.cpp" line="193"/>
+        <location filename="gui/window.cpp" line="194"/>
         <source>Save file error</source>
         <translation>Ошибка сохранения файла</translation>
     </message>
@@ -363,23 +486,23 @@
     </message>
     <message>
         <location filename="gui/window.cpp" line="146"/>
-        <location filename="gui/window.cpp" line="169"/>
+        <location filename="gui/window.cpp" line="170"/>
         <source>Warning</source>
         <translation>Предупреждение</translation>
     </message>
     <message>
         <location filename="gui/window.cpp" line="149"/>
-        <location filename="gui/window.cpp" line="172"/>
+        <location filename="gui/window.cpp" line="173"/>
         <source>Open file error</source>
         <translation>Ошибка открытия файла</translation>
     </message>
     <message>
-        <location filename="gui/window.cpp" line="233"/>
+        <location filename="gui/window.cpp" line="234"/>
         <source>Script exception</source>
         <translation>Исключение</translation>
     </message>
     <message>
-        <location filename="gui/window.cpp" line="265"/>
+        <location filename="gui/window.cpp" line="266"/>
         <source>You want to save file?</source>
         <translation>Вы хотите сохранить файл?</translation>
     </message>
