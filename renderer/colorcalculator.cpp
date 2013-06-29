@@ -55,6 +55,16 @@ uint ColorCalculator::getPixel(int x,int y,double rx,double ry){
     if(absolutey)engine.globalObject().setProperty("y",y);
     else engine.globalObject().setProperty("y",ry);
 
+    QScriptValue absoluteVal=engine.newObject();
+    absoluteVal.setProperty("x",x);
+    absoluteVal.setProperty("y",y);
+    engine.globalObject().setProperty("absolute",absoluteVal);
+
+    QScriptValue relativeVal=engine.newObject();
+    relativeVal.setProperty("x",rx);
+    relativeVal.setProperty("y",ry);
+    engine.globalObject().setProperty("relative",relativeVal);
+
     return getPixel();
 }
 
