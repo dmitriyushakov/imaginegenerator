@@ -24,6 +24,8 @@ public:
     };
 
 private:
+    int dx;
+    int dy;
     YPosition _ypos;
     XPosition _xpos;
     YOrientation _yorient;
@@ -34,6 +36,10 @@ public:
     void setPos(XPosition pos);
     void setPos(YPosition pos);
     void setPos(XPosition xpos,YPosition ypos);
+    void setShiftX(int val);
+    void setShiftY(int val);
+    int getShiftX();
+    int getShiftY();
     YOrientation yOrientation();
     SystemType type();
     XPosition xPos();

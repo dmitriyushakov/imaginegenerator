@@ -51,6 +51,9 @@ void SystemChooser::init(System system){
 
     if(system.type()==System::Rectangle)ui->rectBtn->setChecked(true);
     else ui->radialBtn->setChecked(true);
+
+    ui->shiftXSpin->setValue(system.getShiftX());
+    ui->shiftYSpin->setValue(system.getShiftY());
 }
 
 SystemChooser::~SystemChooser()
@@ -66,6 +69,9 @@ void SystemChooser::okClicked(){
     int pos=ui->centerBox->currentIndex();
     System::XPosition posx=(System::XPosition)(pos%3);
     System::YPosition posy=(System::YPosition)(pos/3);
+    int dx=ui->shiftXSpin->value();
+    int dy=ui->shiftYSpin->value();
+
 
     System::YOrientation orient;
     if(ui->toDownBtn->isChecked()){
@@ -75,6 +81,9 @@ void SystemChooser::okClicked(){
     system.setPos(posx,posy);
     system.setYOrientation(orient);
     system.setType(type);
+
+    system.setShiftX(dx);
+    system.setShiftY(dy);
 
     emit systemSelected(system);
     close();

@@ -25,19 +25,23 @@ QImage* ImagineRender::render(int width, int height){
 
     if(coordSys.xPos()==System::XMiddle){
         dx=width/2;
-        drx=0.5;
     }else if(coordSys.xPos()==System::Right){
         dx=width;
-        drx=1;
+    }else{
+        dx=0;
     }
+    dx+=coordSys.getShiftX();
+    drx=double(dx)/width;
 
     if(coordSys.yPos()==System::YMiddle){
         dy=height/2;
-        dry=0.5;
     }else if(coordSys.yPos()==System::Down){
         dy=height;
-        dry=1;
+    }else{
+        dy=0;
     }
+    dy+=(coordSys.yOrientation()==System::ToDown)?coordSys.getShiftY():-coordSys.getShiftY();
+    dry=double(dy)/height;
 
     color->setSize(width,height);
 

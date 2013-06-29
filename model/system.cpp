@@ -23,6 +23,22 @@ void System::setPos(XPosition xpos, YPosition ypos){
     _ypos=ypos;
 }
 
+void System::setShiftX(int val){
+    dx=val;
+}
+
+void System::setShiftY(int val){
+    dy=val;
+}
+
+int System::getShiftX(){
+    return dx;
+}
+
+int System::getShiftY(){
+    return dy;
+}
+
 System::YOrientation System::yOrientation(){
     return _yorient;
 }
@@ -44,4 +60,6 @@ System::System(){
     _xpos=Left;
     _ypos=Up;
     _yorient=ToDown;
+    dx=0;
+    dy=0;
 }

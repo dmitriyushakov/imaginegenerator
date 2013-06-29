@@ -1,3 +1,3 @@
-#define PROJECT_VERSION 2
+#define PROJECT_VERSION 3
 #define PROJECT_API_LEVEL 2
-#define VERSION "1.1"
+#define VERSION "1.2"

@@ -93,6 +93,8 @@ StorageError ProjectStorage::saveLayout(Layer &lay, QString filename){
         writer.writeAttribute("xcenter",cxpos);
         writer.writeAttribute("ycenter",cypos);
         writer.writeAttribute("yorientation",yorient);
+        writer.writeAttribute("dx",QString::number(system.getShiftX()));
+        writer.writeAttribute("dy",QString::number(system.getShiftY()));
         writer.writeEndElement();
 
         writer.writeEndElement();
@@ -175,6 +177,8 @@ StorageError ProjectStorage::resoreLayout(Layer &lay, QString filename){
                 QString cxpos=elem.attribute("xcenter","Left");
                 QString cypos=elem.attribute("ycenter","Up");
                 QString yorient=elem.attribute("yorientation","ToDown");
+                int dx=elem.attribute("dx","0").toInt();
+                int dy=elem.attribute("dy","0").toInt();
 
                 System sys;
                 sys.setType(systemtype=="Radial"?System::Radial : System::Rectangle);
@@ -194,6 +198,9 @@ StorageError ProjectStorage::resoreLayout(Layer &lay, QString filename){
                 }else{
                     sys.setPos(System::Up);
                 }
+
+                sys.setShiftX(dx);
+                sys.setShiftY(dy);
 
                 sys.setYOrientation(yorient=="toUp"?System::ToUp:System::ToDown);
                 lay.setSystem(sys);
