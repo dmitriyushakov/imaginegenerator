@@ -30,6 +30,7 @@ private slots:
     void changeSystem();
     void enableChangeSystem();
     void systemChanged(System sys);
+    void toggleExpand();
 signals:
     void projectChanged();
     void renderClicked();

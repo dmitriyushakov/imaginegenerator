@@ -28,6 +28,7 @@ LayerSettings::LayerSettings(QWidget *parent) :
     connect(ui->yabsolute,SIGNAL(toggled(bool)),this,SIGNAL(projectChanged()));
     connect(ui->yrelate,SIGNAL(toggled(bool)),this,SIGNAL(projectChanged()));
     connect(ui->systemBtn,SIGNAL(clicked()),this,SLOT(changeSystem()));
+    connect(ui->expandBtn,SIGNAL(clicked()),this,SLOT(toggleExpand()));
 }
 
 Layer LayerSettings::getProjLayout(){
@@ -144,4 +145,11 @@ void LayerSettings::systemChanged(System sys){
     system=sys;
     emit projectChanged();
     showSystemInfo(system);
+}
+
+void LayerSettings::toggleExpand(){
+    QWidget *widget=ui->toggleWidget;
+    widget->setVisible(!widget->isVisible());
+
+    ui->expandBtn->setText(widget->isVisible()?tr("Expand"):tr("Minimize"));
 }
