@@ -38,14 +38,13 @@ private slots:
     void rendered(QImage *img);
     void threadFinished();
     void projectEdited();
+    void toRender();
 protected:
     void closeEvent(QCloseEvent *ev);
 public:
     bool saveEdited();
     void open(QString filename);
     explicit Window(QWidget *parent = 0);
-public slots:
-    void toRender();
 };
 
 #endif // WINDOW_H
