@@ -28,6 +28,7 @@ private:
     QString exportFile;
     char *exportFormat;
     QSize exportSize;
+    bool saveEdited();
 private slots:
     void showAbout();
     void askExportSize();
@@ -42,7 +43,6 @@ private slots:
 protected:
     void closeEvent(QCloseEvent *ev);
 public:
-    bool saveEdited();
     void open(QString filename);
     explicit Window(QWidget *parent = 0);
 };
