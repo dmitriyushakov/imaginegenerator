@@ -23,6 +23,10 @@ QString Layer::getBComponent(){
     return bcomponent;
 }
 
+QString Layer::getAComponent(){
+    return acomponent;
+}
+
 QString Layer::getGreyComponent(){
     return greycomponent;
 }
@@ -33,6 +37,7 @@ QString Layer::getComponent(ComponentType component){
         case GreenColor:return gcomponent;break;
         case BlueColor:return bcomponent;break;
         case Grey:return greycomponent;break;
+        case Alpha:return acomponent;break;
         default:return QString();break;
     }
 }
@@ -65,6 +70,10 @@ void Layer::setBComponent(QString expr){
     bcomponent=expr;
 }
 
+void Layer::setAComponent(QString expr){
+    acomponent=expr;
+}
+
 void Layer::setGreyComponent(QString expr){
     greycomponent=expr;
 }
@@ -75,7 +84,12 @@ void Layer::setComponent(ComponentType type,QString exp){
         case GreenColor:gcomponent=exp;break;
         case BlueColor:bcomponent=exp;break;
         case Grey:greycomponent=exp;break;
+        case Alpha:acomponent=exp;break;
     }
+}
+
+bool Layer::alphaIsSet(){
+    return !acomponent.isEmpty();
 }
 
 void Layer::setXPointType(PointType type){

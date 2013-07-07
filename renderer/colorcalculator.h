@@ -16,7 +16,9 @@ class ColorCalculator
     ScriptableCalculator *red;
     ScriptableCalculator *green;
     ScriptableCalculator *blue;
+    ScriptableCalculator *alpha;
     QScriptEngine engine;
+    bool hasAlpha;
     bool absolutex;
     bool absolutey;
     uint getPixel();

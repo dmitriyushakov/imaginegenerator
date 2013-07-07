@@ -21,6 +21,7 @@ LayerSettings::LayerSettings(QWidget *parent) :
     connect(ui->greenVal,SIGNAL(textEdited(QString)),this,SIGNAL(projectChanged()));
     connect(ui->blueVal,SIGNAL(textEdited(QString)),this,SIGNAL(projectChanged()));
     connect(ui->greyVal,SIGNAL(textEdited(QString)),this,SIGNAL(projectChanged()));
+    connect(ui->alphaVal,SIGNAL(textEdited(QString)),this,SIGNAL(projectChanged()));
     connect(ui->tricolorBtn,SIGNAL(toggled(bool)),this,SIGNAL(projectChanged()));
     connect(ui->greyBtn,SIGNAL(toggled(bool)),this,SIGNAL(projectChanged()));
     connect(ui->xabsolute,SIGNAL(toggled(bool)),this,SIGNAL(projectChanged()));
@@ -37,6 +38,7 @@ Layer LayerSettings::getProjLayout(){
     lay.setRComponent(ui->redVal->text());
     lay.setGComponent(ui->greenVal->text());
     lay.setBComponent(ui->blueVal->text());
+    lay.setAComponent(ui->alphaVal->text());
     lay.setGreyComponent(ui->greyVal->text());
     lay.setColorType((ui->tricolorBtn->isChecked())?Tricolor:GreyColor);
     lay.setXPointType((ui->xabsolute->isChecked())?Absolute:Related);
@@ -51,6 +53,7 @@ void LayerSettings::setProjLayout(Layer lay){
     ui->greenVal->setText(lay.getGComponent());
     ui->blueVal->setText(lay.getBComponent());
     ui->greyVal->setText(lay.getGreyComponent());
+    ui->alphaVal->setText(lay.getAComponent());
 
     if(lay.getColorType()==Tricolor){
         ui->tricolorBtn->setChecked(true);

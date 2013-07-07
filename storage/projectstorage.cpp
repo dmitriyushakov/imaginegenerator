@@ -29,6 +29,7 @@ StorageError ProjectStorage::saveLayout(Layer &lay, QString filename){
         if(!lay.getGComponent().isEmpty())writer.writeTextElement("Green",lay.getGComponent());
         if(!lay.getBComponent().isEmpty())writer.writeTextElement("Blue",lay.getBComponent());
         if(!lay.getGreyComponent().isEmpty())writer.writeTextElement("Grey",lay.getGreyComponent());
+        if(!lay.getAComponent().isEmpty())writer.writeTextElement("Alpha",lay.getAComponent());
 
         QString xtype;
         if(lay.getXPointType()==Absolute){
@@ -169,6 +170,10 @@ StorageError ProjectStorage::resoreLayout(Layer &lay, QString filename){
 
             if(!layer.elementsByTagName("Grey").isEmpty()){
                 lay.setGreyComponent(layer.elementsByTagName("Grey").at(0).toElement().text());
+            }
+
+            if(!layer.elementsByTagName("Alpha").isEmpty()){
+                lay.setAComponent(layer.elementsByTagName("Alpha").at(0).toElement().text());
             }
 
             if(!layer.elementsByTagName("CoordSystem").isEmpty()){

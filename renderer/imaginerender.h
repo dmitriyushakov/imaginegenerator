@@ -13,6 +13,7 @@ private:
     int lprogr;
     bool _stop;
     bool toStop();
+    bool hasAlpha;
     System coordSys;
 public:
     void stop();

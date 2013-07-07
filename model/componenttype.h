@@ -5,7 +5,8 @@ enum ComponentType{
     RedColor,
     GreenColor,
     BlueColor,
-    Grey
+    Grey,
+    Alpha
 };
 
 #endif // COMPONENTTYPE_H

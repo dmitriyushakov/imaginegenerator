@@ -7,6 +7,7 @@ ImagineRender::ImagineRender(){}
 ImagineRender::ImagineRender(Layer &lay):QObject(){
     color=new ColorCalculator(lay);
     _stop=false;
+    hasAlpha=lay.alphaIsSet();
     coordSys=lay.getSystem();
 }
 
@@ -15,7 +16,7 @@ ImagineRender::~ImagineRender(){
 }
 
 QImage* ImagineRender::render(int width, int height){
-    QImage *img=new QImage(width,height,QImage::Format_RGB32);
+    QImage *img=new QImage(width,height,hasAlpha?QImage::Format_ARGB32:QImage::Format_RGB32);
     lprogr=0;
 
     int dx=0;

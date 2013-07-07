@@ -18,6 +18,7 @@ class Layer
     QString rcomponent;
     QString gcomponent;
     QString bcomponent;
+    QString acomponent;
     QString greycomponent;
     PointType xtype;
     PointType ytype;
@@ -29,16 +30,19 @@ public:
     QString getRComponent();
     QString getGComponent();
     QString getBComponent();
+    QString getAComponent();
     QString getGreyComponent();
     QString getComponent(ComponentType component);
     PointType getXPointType();
     PointType getYPointType();
     ColorType getColorType();
+    bool alphaIsSet();
     System getSystem();
     void setScript(QString script);
     void setRComponent(QString expr);
     void setGComponent(QString expr);
     void setBComponent(QString expr);
+    void setAComponent(QString expr);
     void setGreyComponent(QString expr);
     void setComponent(ComponentType component,QString exp);
     void setXPointType(PointType type);

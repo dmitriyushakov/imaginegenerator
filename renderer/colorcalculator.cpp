@@ -33,6 +33,8 @@ ColorCalculator::ColorCalculator(Layer &lay){
         grey=new ScriptableCalculator(lay,Grey,&engine);
         isColor=false;
     }
+    hasAlpha=lay.alphaIsSet();
+    if(hasAlpha)alpha=new ScriptableCalculator(lay,Alpha,&engine);
 }
 
 ColorCalculator::~ColorCalculator(){
@@ -98,6 +100,11 @@ uint ColorCalculator::getPixel(){
             _errorMessage=grey->errorMessage();
         }
     }
+
+    if(hasAlpha){
+        value|=alpha->math()<<24;
+    }
+
     return value;
 }
 
